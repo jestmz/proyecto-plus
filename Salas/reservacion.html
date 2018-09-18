@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Reservacion</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+</head>
+
+<body>
+        <div class="container login hoverable">
+                <div class="row mar">
+                        <div class="center-align">
+                                <h1>Registro</h1>
+                        </div>
+
+                        <form class="col s12">
+                                <div class="input-field col s12">
+                                        <input id="Fecha" type="date" class="validate">
+                                        <label for="Fecha">Fecha</label>
+                                </div>
+                                <div class="input-field col s12">
+                                        <input id="Hora" type="time" class="validate">
+                                        <label for="Hora">Hora</label>
+                                </div>
+                                <div class="input-field col s12">
+                                        <input id="Sala" type="text" class="validate">
+                                        <label for="Sala">Confirmar sala</label>
+                                </div>
+                                <div class="input-field col s12">
+                                        <input id="Reserva" type="text" class="validate">
+                                        <label for="Reserva">Titulo de reserva</label>
+                                </div>
+
+                                <div class="center-align">
+                                        <a class="waves-effect waves-light btn light-green accent-4" id="Aceptar">
+                                                <i class="material-icons left">save</i>Registrarse
+                                        </a>
+                                        <a class="waves-effect waves-light btn red darken-1" id="btnCancelar">
+                                                <i class="material-icons left">close</i>Cancelar
+                                        </a>
+                                </div>
+                                
+                        </form>
+                </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+        <script src="js/reservacion.js"></script>
+
+        <!-- Initialize Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+  <script>
+    var config = {
+      apiKey: "AIzaSyA0OOMKbMytDe8FZSMEx44LOJLacepiBM8",
+      authDomain: "salas-bbc10.firebaseapp.com",
+      databaseURL: "https://salas-bbc10.firebaseio.com",
+      projectId: "salas-bbc10",
+      storageBucket: "salas-bbc10.appspot.com",
+      messagingSenderId: "257972747978"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+</body>
+
+</html>

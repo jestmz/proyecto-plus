@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Usuario</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/plus.ico" />
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link rel="stylesheet" href="css/usuario.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Tammudu" rel="stylesheet">
+    
+
+</head>
+
+
+<body>
+
+    <div class="container login hoverable">
+        <div class="row mar">
+        <div class="center-align">
+            <h1 class="h1">Crea tu perfil</h1>
+        </div>
+            <form class="col s12">
+                <div class="input-field col s12 marg">
+                    <input id="nombre" type="text" class="validate" maxlength="10" required>                   
+                    <label for="nombre">Nombre de usuario</label>
+                </div>
+
+                <div class="input-field col s12 marg">
+                    <input id="imagen" type="file">
+                </div>
+
+                <div class="center-align">
+                    <a class="waves-effect waves-light btn pink accent-2" id="Aceptar">
+                        <i class="material-icons left">assignment_ind</i>Aceptar
+                    </a>
+                </div>
+                <div class="center-align max"><img id="contenido"></div>
+            </form> 
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <script src="js/usuario.js"></script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyA0OOMKbMytDe8FZSMEx44LOJLacepiBM8",
+            authDomain: "salas-bbc10.firebaseapp.com",
+            databaseURL: "https://salas-bbc10.firebaseio.com",
+            projectId: "salas-bbc10",
+            storageBucket: "salas-bbc10.appspot.com",
+            messagingSenderId: "257972747978"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+</body>
+
+</html>

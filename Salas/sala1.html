@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sala 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/plus.ico" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/sala1.css" />
+    <link rel="stylesheet" href="css/inicio.css">
+    
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="nav-wrapper light-blue size">
+            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons mover small">menu</i></a>
+            <ul id="slide-out" class="sidenav">
+                <li>
+                    <div class="user-view">
+                        <div class="background">
+                            <img src="images/vector-free-abstract-background-3.jpg">
+                        </div>
+                        <a href="#user"><img class="circle" src="images/card1.jpeg"></a>
+                    </div>
+                </li>
+                <li>
+                    <a class='dropdown-trigger' data-target='dropdown1'><i class="material-icons ">photo</i>Ver salas</a>
+
+                    <ul id='dropdown1' class='dropdown-content'>
+                        <li><a href="sala1.html"><i class="material-icons ">work</i>Sala 1</a></li>
+                        <li><a href="sala2.html"><i class="material-icons ">weekend</i>Sala 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="#!"><i class="material-icons">today</i>Reservar salas</a></li>
+                <li><a href="index.html" id="cerrar" title="cerrar sesión" onclick="desconectar()"><i class="small material-icons">exit_to_app</i>Cerrar
+                        sesión</a></li>
+                <li>
+                </li>
+            </ul>
+            <div class="mo">
+                <a href="index.html" title="cerrar sesión" onclick="desconectar()"><i class="small material-icons">exit_to_app</i></a>
+            </div>
+        </div>
+        </div>
+    </header>
+    <div class="w3-main w3-white">
+
+        <!-- Push down content on small screens -->
+        <div class="w3-hide-large" style="margin-top:80px"></div>
+
+        <!-- Slideshow Header -->
+        <div class="w3-container" id="apartment">
+            <div class="center">
+                <h1 class="w3-text-green">Sala 1</h1>
+            </div>
+            <div class="w3-display-container mySlides">
+                <img src="images/1.jpeg" style="width:100%;margin-bottom:-6px;max-height: 550px">
+                <div class="w3-display-bottomleft w3-container w3-black">
+                    <p>Living Room</p>
+                </div>
+            </div>
+            <div class="w3-display-container mySlides">
+                <img src="images/2.jpeg" style="width:100%;margin-bottom:-6px;max-height: 550px">
+                <div class="w3-display-bottomleft w3-container w3-black">
+                    <p>Dining Room</p>
+                </div>
+            </div>
+            <div class="w3-display-container mySlides">
+                <img src="images/3.jpeg" style="width:100%;margin-bottom:-6px;max-height: 550px">
+                <div class="w3-display-bottomleft w3-container w3-black">
+                    <p>Bedroom</p>
+                </div>
+            </div>
+        </div>
+        <div class="w3-row-padding w3-section">
+            <div class="w3-col s4">
+                <img class="demo w3-opacity w3-hover-opacity-off" src="images/1.jpeg" style="width:100%;cursor:pointer;max-height: 250px;height: 250px;"
+                    onclick="currentDiv(1)" title="Living room">
+            </div>
+            <div class="w3-col s4">
+                <img class="demo w3-opacity w3-hover-opacity-off" src="images/2.jpeg" style="width:100%;cursor:pointer;max-height: 250px;height: 250px;"
+                    onclick="currentDiv(2)" title="Dining room">
+            </div>
+            <div class="w3-col s4">
+                <img class="demo w3-opacity w3-hover-opacity-off" src="images/3.jpeg" style="width:100%;cursor:pointer;max-height: 250px;height: 250px;"
+                    onclick="currentDiv(3)" title="Bedroom">
+            </div>
+        </div>
+
+        <div class="w3-container background">
+            <h4><strong>The space</strong></h4>
+            <div class="w3-row w3-large">
+                <div class="w3-col s6">
+                    <p><i class="fa fa-fw fa-male"></i> Max people: 4</p>
+                    <p><i class="fa fa-fw fa-bath"></i> Bathrooms: 2</p>
+                    <p><i class="fa fa-fw fa-bed"></i> Bedrooms: 1</p>
+                </div>
+                <div class="w3-col s6">
+                    <p><i class="fa fa-fw fa-clock-o"></i> Check In: After 3PM</p>
+                    <p><i class="fa fa-fw fa-clock-o"></i> Check Out: 12PM</p>
+                </div>
+            </div>
+            <hr>
+
+            <h4><strong>Amenities</strong></h4>
+            <div class="w3-row w3-large">
+                <div class="w3-col s6">
+                    <p><i class="fa fa-fw fa-shower"></i> Shower</p>
+                    <p><i class="fa fa-fw fa-wifi"></i> WiFi</p>
+                    <p><i class="fa fa-fw fa-tv"></i> TV</p>
+                </div>
+                <div class="w3-col s6">
+                    <p><i class="fa fa-fw fa-cutlery"></i> Kitchen</p>
+                    <p><i class="fa fa-fw fa-thermometer"></i> Heating</p>
+                    <p><i class="fa fa-fw fa-wheelchair"></i> Accessible</p>
+                </div>
+            </div>
+            <hr>
+
+            <h4><strong>Extra Info</strong></h4>
+            <p>Our apartment is really clean and we like to keep it that way. Enjoy the lorem ipsum dolor sit amet,
+                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>We accept: <i class="fa fa-credit-card w3-large"></i> <i class="fa fa-cc-mastercard w3-large"></i> <i
+                    class="fa fa-cc-amex w3-large"></i> <i class="fa fa-cc-cc-visa w3-large"></i><i class="fa fa-cc-paypal w3-large"></i></p>
+            <hr>
+
+            <h4><strong>Rules</strong></h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.</p>
+            <p>Subscribe to receive updates on available dates and special offers.</p>
+            <p><button class="w3-button w3-green w3-third" onclick="document.getElementById('subscribe').style.display='block'">Reservar</button></p>
+        </div>
+        <hr>
+
+
+
+        <!-- End page content -->
+    </div>
+
+
+
+    <script>
+        // Script to open and close sidebar when on tablets and phones
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Slideshow Apartment Images
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function currentDiv(n) {
+            showDivs(slideIndex = n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+            }
+            x[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " w3-opacity-off";
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+    <script src="js/sala1.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyA0OOMKbMytDe8FZSMEx44LOJLacepiBM8",
+            authDomain: "salas-bbc10.firebaseapp.com",
+            databaseURL: "https://salas-bbc10.firebaseio.com",
+            projectId: "salas-bbc10",
+            storageBucket: "salas-bbc10.appspot.com",
+            messagingSenderId: "257972747978"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script>
+        $('.dropdown-trigger').dropdown();
+    </script>
+</body>
+
+</html>
