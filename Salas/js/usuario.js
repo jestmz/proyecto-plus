@@ -41,7 +41,6 @@ $(document).ready(function () {
 
         contenido.onload = function(){
             img = contenido.result;
-            $("#contenido").attr("src", img);
         };
     }) ;
     

@@ -2,42 +2,125 @@
 <html>
 
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Page Title</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" href="images/plus.ico" />
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Anton|Josefin+Sans|Quicksand" rel="stylesheet">
+
+  <!--Import materialize.css-->
+  <link href="https://fonts.googleapis.com/css?family=Bentham|Playfair+Display|Raleway:400,500|Suranna|Trocchi" rel="stylesheet">
+
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
+  <!--  Android 5 Chrome Color-->
+  <meta name="theme-color" content="#EE6E73">
+  <!-- CSS-->
+  <link rel="stylesheet" href="css/horarios.css">
+
 </head>
 
 <body>
-
-  <div>
-      <div class="row">
-          <div class="col s12 m6">
-            <div class="card blue-grey darken-1">
-              <div class="card-content white-text">
-                <span class="card-title" id="title"></span>
-                <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
-              </div>
-              <div class="card-action">
-                <a href="#">This is a link</a>
-                <a href="#">This is a link</a>
-              </div>
+  <header style="padding: 0">
+    <div class="nav-wrapper light-blue size z-depth-3">
+      <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons mover small">menu</i></a>
+      <ul id="slide-out" class="sidenav">
+        <li>
+          <div class="user-view user">
+            <div class="background">
+              <img src="images/vector-free-abstract-background-3.jpg">
             </div>
           </div>
-        </div>
+        </li>
+        <li><a href="inicio.html"><i class="material-icons">home</i>Inicio</a></li>
+        <li>
+          <a class='dropdown-trigger' data-target='dropdown1'><i class="material-icons ">photo</i>Ver
+            salas</a>
 
-    <div id="Dispositivos">
+          <ul id='dropdown1' class='dropdown-content'>
+            <li><a href="sala1.html"><i class="material-icons ">work</i>Sala 1</a></li>
+            <li><a href="sala2.html"><i class="material-icons ">weekend</i>Sala 2</a></li>
+          </ul>
+        </li>
+        <li><a href="reservacion.html"><i class="material-icons">today</i>Reservar salas</a></li>
+        <li><a href="horarios.html"><i class="material-icons">access_time</i>Horarios</a></li>
+        <li><a href="inicio.html"><i class="material-icons">settings</i>Configuración</a></li>
+        <li><a href="index.html" id="cerrar" title="cerrar sesión" onclick="desconectar()">
+            <i class="small material-icons">exit_to_app</i>Cerrar sesión
+          </a>
+        </li>
 
+      </ul>
+      <div class="mo">
+        <a>Cerrar sesión</a>
+        <a href="index.html" title="cerrar sesión" onclick="desconectar()"><i class="small material-icons">exit_to_app</i></a>
+      </div>
     </div>
+    </div>
+  </header>
+
+
+  <div class="row" id="row">
 
   </div>
 
 
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
+  <!-- Footer
+  <footer class="page-footer light-blue z-depth-2">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Footer Content</h5>
+          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2014 Copyright mothe
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </div>
+    </div>
+  </footer> -->
+
+
+
+
+  <!-- Scripts -->
+  <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 2500); // Change image every 2 seconds
+    }
+  </script>
+
 
 
   <!-- Initialize Firebase -->
@@ -54,7 +137,17 @@
     firebase.initializeApp(config);
   </script>
 
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
   <script src="js/horarios.js"></script>
+  <script src="js/inicio.js"></script>
+  <script src="./Pushpin Demo - Materialize_files/materialize.js.descarga"></script>
+  <script src="./Pushpin Demo - Materialize_files/init.js.descarga"></script>
+
+  <script>
+    $('.dropdown-trigger').dropdown();
+  </script>
 </body>
 
 </html>

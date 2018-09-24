@@ -11,68 +11,67 @@
 
   <!--Import materialize.css-->
   <link href="https://fonts.googleapis.com/css?family=Bentham|Playfair+Display|Raleway:400,500|Suranna|Trocchi" rel="stylesheet">
-  <link type="text/css" rel="stylesheet" href="css/main.css" />
+
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
 
   <!--  Android 5 Chrome Color-->
   <meta name="theme-color" content="#EE6E73">
   <!-- CSS-->
-  <link href="./Pushpin Demo - Materialize_files/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link type="text/css" rel="stylesheet" href="css/inicio.css" />
 
 </head>
 
 <body>
-  <header style="padding: 0">
-    <div class="nav-wrapper light-blue size z-depth-3">
-      <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons mover small">menu</i></a>
-      <ul id="slide-out" class="sidenav">
-        <li>
-          <div class="user-view">
-            <div class="background">
-              <img src="images/vector-free-abstract-background-3.jpg">
-            </div>
-            <a href="#user"><img class="circle" src="images/card1.jpeg"></a>
-          </div>
-        </li>
-        <li>
-          <a class='dropdown-trigger' data-target='dropdown1'><i class="material-icons ">photo</i>Ver salas</a>
+    <header style="padding: 0">
+        <div class="nav-wrapper light-blue size z-depth-3">
+                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons mover small">menu</i></a>
+                <ul id="slide-out" class="sidenav">
+                        <li>
+                                <div class="user-view user">
+                                        <div class="background">
+                                                <img src="images/vector-free-abstract-background-3.jpg">
+                                        </div>
+                                </div>
+                        </li>
+                        <li>
+                                <a class='dropdown-trigger' data-target='dropdown1'><i class="material-icons ">photo</i>Ver
+                                        salas</a>
 
-          <ul id='dropdown1' class='dropdown-content'>
-            <li><a href="sala1.html"><i class="material-icons ">work</i>Sala 1</a></li>
-            <li><a href="sala2.html"><i class="material-icons ">weekend</i>Sala 2</a></li>
-          </ul>
-        </li>
-        <li><a href="reservacion.html"><i class="material-icons">today</i>Reservar salas</a></li>
-        <li><a href="horarios.html"><i class="material-icons">access_time</i>Horarios</a></li>
-        <li><a href="index.html" id="cerrar" title="cerrar sesión" onclick="desconectar()"><i class="small material-icons">exit_to_app</i>Cerrar
-            sesión</a></li>
-        <li>
-        </li>
-
-        <li class="text"></li>
-      </ul>
-      <div class="mo">
-        <a href="index.html" title="cerrar sesión" onclick="desconectar()"><i class="small material-icons">exit_to_app</i></a>
-      </div>
-    </div>
-    </div>
-  </header>
-
+                                <ul id='dropdown1' class='dropdown-content'>
+                                        <li><a href="sala1.html"><i class="material-icons ">work</i>Sala 1</a></li>
+                                        <li><a href="sala2.html"><i class="material-icons ">weekend</i>Sala 2</a></li>
+                                </ul>
+                        </li>
+                        <li><a href="reservacion.html"><i class="material-icons">today</i>Reservar salas</a></li>
+                        <li><a href="horarios.html"><i class="material-icons">access_time</i>Horarios</a></li>
+                        <li><a href="inicio.html"><i class="material-icons">settings</i>Configuración</a></li>
+                        <li><a href="index.html" id="cerrar" title="cerrar sesión" onclick="desconectar()">
+                                        <i class="small material-icons">exit_to_app</i>Cerrar sesión
+                                </a>
+                        </li>
+                
+                </ul>
+                <div class="mo">
+                        <a>Cerrar sesión</a>
+                        <a href="index.html" title="cerrar sesión" onclick="desconectar()"><i class="small material-icons">exit_to_app</i></a>
+                </div>
+        </div>
+        </div>
+</header>
 
 
   <div class="slideshow-container">
 
     <div class="mySlides fade">
-      <img src="images/1.jpeg" style="width:100%">
+      <img src="images/1.jpeg" style="width:100%" class="img">
     </div>
 
     <div class="mySlides fade">
-      <img src="images/2.jpeg" style="width:100%">
+      <img src="images/2.jpeg" style="width:100%" class="img">
     </div>
 
     <div class="mySlides fade">
-      <img src="images/3.jpeg" style="width:100%">
+      <img src="images/3.jpeg" style="width:100%" class="img">
     </div>
 
   </div>
@@ -93,61 +92,40 @@
 
 
   <div class="row">
-  <div id="grey" class="block col s12 m12 l" style="margin-bottom: 0">
-    <nav class="pushpin-demo-nav pin-top none" data-target="grey" style="top: 0px;">
-      <div class="nav-wrapper grey darken-1">
-        <div class="container">
-          <a href="https://materializecss.com/pushpin-demo.html#" class="brand-logo">Sala 1</a>
-        </div>
-      </div>
-    </nav>
-    <div class="backgroundi shadow z-depth-2 pin col s12 m12">
-      <div class="card-container block pin l">
-        <div class="card u-clearfix pin">
-          <div class="card-body">
-            <span class="card-author subtle">John Smith</span>
-            <h2 class="card-title">New Brunch Recipe</h2>
-            <span class="card-description subtle">These last few weeks I have been working hard on a new brunch
+    
+    <div class="card-container block pin l colorb">
+      <div class="card u-clearfix pin color">
+        <div class="card-body">
+          <span class="card-author subtle colorb">John Smith</span>
+          <h2 class="card-title">New Brunch Recipe</h2>
+          <span class="card-description subtle colorb">These last few weeks I have been working hard on a new brunch
               recipe for you all.</span>
-            <div class="card-read">Read</div>
-            <span class=""><button>Reservar</button></span>
+              <div class="card-read">
+                <span class=""><button>Reservar</button></span>
+              </div>
+            </div>
+            <img src="images/card1.jpeg" alt="" class="card-media" />
           </div>
-          <img src="images/card1.jpeg" alt="" class="card-media" />
         </div>
-        <div class="card-shadow none"></div>
-      </div>
-    </div>
-  </div>
 
-  <div id="" class="block col s12 m12" style="margin-bottom: 0">
-    <nav class="pushpin-demo-nav pin-top none" data-target="pink" style="top: 0px;">
-      <div class="nav-wrapper teal accent-3">
-        <div class="container">
-          <a href="https://materializecss.com/pushpin-demo.html#" class="brand-logo">Sala 2</a>
-        </div>
-      </div>
-    </nav>
-    <div class="background1 pin col s12">
-      <div class="card-container pin l">
-        <div class="card u-clearfix pin">
-          <div class="card-body">
-            <span class="card-author subtle">John Smith</span>
-            <h2 class="card-title">HOLA JOVENES</h2>
-            <span class="card-description subtle">These last few weeks I have been working hard on a new brunch
-              recipe for you all.</span>
-            <div class="card-read">Read</div>
-            <span class=""><button>Reservar</button></span>
+        <div class="card-container block pin l ">
+          <div class="card u-clearfix pin">
+            <div class="card-body">
+              <span class="card-author subtle">John Smith</span>
+              <h2 class="card-title">New Brunch Recipe</h2>
+              <span class="card-description subtle">These last few weeks I have been working hard on a new brunch
+                recipe for you all.</span>
+              <div class="card-read">
+                  <span class=""><button>Reservar</button></span>
+                </div>
+            </div>
+            <img src="images/card1.jpeg" alt="" class="card-media" />
           </div>
-          <img src="images/card2.jpeg" alt="" class="card-media pin" />
         </div>
-        <div class="card-shadow none"></div>
       </div>
-    </div>
-  </div>
-</div>
 
 <!-- Footer -->
-  <footer class="page-footer grey darken-3 z-depth-2">
+  <footer class="page-footer light-blue z-depth-2">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
