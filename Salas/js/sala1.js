@@ -1,39 +1,81 @@
 $(document).ready(function () {
-    firebase.auth().onAuthStateChanged(function (user) {
-        if (user) {
-            console.log(user);
-            var user = firebase.auth().currentUser;
+    var slideIndex = 1;
+    showSlides(slideIndex);
 
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
 
-            firebase.database().ref("Usuarios/" + user.uid).once("value").then(function (snapshot) {
-                var nombre = (snapshot.val() && snapshot.val().Nombre) || 'Sin nombre';
-                var email = (snapshot.val()) && snapshot.val().Email || 'Sin email';                
-                var image = (snapshot.val()) && snapshot.val().Imagen || 'Sin foto';
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
 
-
-                var mostrar = '<span class="white-text name">' + nombre + '</span>';
-                var mostrar2 = '<span class="white-text email">' + email + '</span>';
-                var mostrar3 = '<a href="#user">';
-                mostrar3+= '<img class="circle" src=' + image  + '>';
-                mostrar3 += '</a>';
-
-                $(mostrar3).appendTo('.user-view');
-                $(mostrar).appendTo('.user-view');
-                $(mostrar2).appendTo('.user-view');
-
-            });
-
-
-        } else {
-            console.log('Usuario no logueado');
-            location.assign('index.html');
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides2");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {
+            slideIndex = 1
         }
-    });
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+
+    // Script to open and close sidebar when on tablets and phones
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+    }
+
+    // Slideshow Apartment Images
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+        showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > x.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = x.length
+        }
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+        }
+        x[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " w3-opacity-off";
+    }
 
     $('.btn').click(function () {
         location.assign('reservacion.html');
     });
-
-   
-        $('.sidenav').sidenav();
 });

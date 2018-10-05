@@ -8,56 +8,49 @@
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Anton|Josefin+Sans|Quicksand" rel="stylesheet">
-
   <!--Import materialize.css-->
   <link href="https://fonts.googleapis.com/css?family=Bentham|Playfair+Display|Raleway:400,500|Suranna|Trocchi" rel="stylesheet">
-
-  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-
-  <!--  Android 5 Chrome Color-->
-  <meta name="theme-color" content="#EE6E73">
   <!-- CSS-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
   <link type="text/css" rel="stylesheet" href="css/inicio.css" />
-
 </head>
 
 <body>
-    <header style="padding: 0">
-        <div class="nav-wrapper light-blue size z-depth-3">
-                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons mover small">menu</i></a>
-                <ul id="slide-out" class="sidenav">
-                        <li>
-                                <div class="user-view user">
-                                        <div class="background">
-                                                <img src="images/vector-free-abstract-background-3.jpg">
-                                        </div>
-                                </div>
-                        </li>
-                        <li>
-                                <a class='dropdown-trigger' data-target='dropdown1'><i class="material-icons ">photo</i>Ver
-                                        salas</a>
+  <header style="padding: 0">
+    <div class="nav-wrapper light-blue size z-depth-3">
+      <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons mover small">menu</i></a>
+      <ul id="slide-out" class="sidenav">
+        <li>
+          <div class="user-view user">
+            <div class="background">
+              <img src="images/vector-free-abstract-background-3.jpg">
+            </div>
+          </div>
+        </li>
+        <li>
+          <a class='dropdown-trigger' data-target='dropdown1'><i class="material-icons ">photo</i>Ver
+            salas</a>
 
-                                <ul id='dropdown1' class='dropdown-content'>
-                                        <li><a href="sala1.html"><i class="material-icons ">work</i>Sala 1</a></li>
-                                        <li><a href="sala2.html"><i class="material-icons ">weekend</i>Sala 2</a></li>
-                                </ul>
-                        </li>
-                        <li><a href="reservacion.html"><i class="material-icons">today</i>Reservar salas</a></li>
-                        <li><a href="horarios.html"><i class="material-icons">access_time</i>Horarios</a></li>
-                        <li><a href="inicio.html"><i class="material-icons">settings</i>Configuración</a></li>
-                        <li><a href="index.html" id="cerrar" title="cerrar sesión" onclick="desconectar()">
-                                        <i class="small material-icons">exit_to_app</i>Cerrar sesión
-                                </a>
-                        </li>
-                
-                </ul>
-                <div class="mo">
-                        <a>Cerrar sesión</a>
-                        <a href="index.html" title="cerrar sesión" onclick="desconectar()"><i class="small material-icons">exit_to_app</i></a>
-                </div>
-        </div>
-        </div>
-</header>
+          <ul id='dropdown1' class='dropdown-content'>
+            <li><a href="sala1.html"><i class="material-icons ">work</i>Sala 1</a></li>
+            <li><a href="sala2.html"><i class="material-icons ">weekend</i>Sala 2</a></li>
+          </ul>
+        </li>
+        <li><a href="reservacion.html"><i class="material-icons">today</i>Reservar salas</a></li>
+        <li><a href="horarios.html"><i class="material-icons">access_time</i>Horarios</a></li>
+        <li><a href="configuracion.html"><i class="material-icons">settings</i>Configuración</a></li>
+        <li><a href="index.html" id="cerrar" title="cerrar sesión" onclick="desconectar()">
+            <i class="small material-icons">exit_to_app</i>Cerrar sesión
+          </a>
+        </li>
+
+      </ul>
+      <div class="mo" href="index.html" onclick="desconectar()">
+        <a>Cerrar sesión</a>
+        <a title="cerrar sesión"><i class="small material-icons">exit_to_app</i></a>
+      </div>
+    </div>
+  </header>
 
 
   <div class="slideshow-container">
@@ -92,40 +85,40 @@
 
 
   <div class="row">
-    
+
     <div class="card-container block pin l colorb">
       <div class="card u-clearfix pin color">
         <div class="card-body">
           <span class="card-author subtle colorb">John Smith</span>
           <h2 class="card-title">New Brunch Recipe</h2>
           <span class="card-description subtle colorb">These last few weeks I have been working hard on a new brunch
-              recipe for you all.</span>
-              <div class="card-read">
-                <span class=""><button>Reservar</button></span>
-              </div>
-            </div>
-            <img src="images/card1.jpeg" alt="" class="card-media" />
+            recipe for you all.</span>
+          <div class="card-read">
+            <span class=""><button>Reservar</button></span>
           </div>
         </div>
-
-        <div class="card-container block pin l ">
-          <div class="card u-clearfix pin">
-            <div class="card-body">
-              <span class="card-author subtle">John Smith</span>
-              <h2 class="card-title">New Brunch Recipe</h2>
-              <span class="card-description subtle">These last few weeks I have been working hard on a new brunch
-                recipe for you all.</span>
-              <div class="card-read">
-                  <span class=""><button>Reservar</button></span>
-                </div>
-            </div>
-            <img src="images/card1.jpeg" alt="" class="card-media" />
-          </div>
-        </div>
+        <img src="images/card1.jpeg" alt="" class="card-media" />
       </div>
+    </div>
 
-<!-- Footer -->
-  <footer class="page-footer light-blue z-depth-2">
+    <div class="card-container block pin l ">
+      <div class="card u-clearfix pin">
+        <div class="card-body">
+          <span class="card-author subtle">John Smith</span>
+          <h2 class="card-title">New Brunch Recipe</h2>
+          <span class="card-description subtle">These last few weeks I have been working hard on a new brunch
+            recipe for you all.</span>
+          <div class="card-read">
+            <span class=""><button>Reservar</button></span>
+          </div>
+        </div>
+        <img src="images/card1.jpeg" alt="" class="card-media" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="page-footer grey darken-3 z-depth-2">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
@@ -154,8 +147,8 @@
 
 
 
-<!-- Scripts -->
-<script>
+  <!-- Scripts -->
+  <script>
     var slideIndex = 0;
     showSlides();
 
@@ -179,31 +172,14 @@
     }
   </script>
 
+  <!-- Initialize Firebase -->
+
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-  <script src="js/inicio.js"></script>
-  <script src="./Pushpin Demo - Materialize_files/materialize.js.descarga"></script>
-  <script src="./Pushpin Demo - Materialize_files/init.js.descarga"></script>
-
-
-  <!-- Initialize Firebase -->
   <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
-  <script>
-    var config = {
-      apiKey: "AIzaSyA0OOMKbMytDe8FZSMEx44LOJLacepiBM8",
-      authDomain: "salas-bbc10.firebaseapp.com",
-      databaseURL: "https://salas-bbc10.firebaseio.com",
-      projectId: "salas-bbc10",
-      storageBucket: "salas-bbc10.appspot.com",
-      messagingSenderId: "257972747978"
-    };
-    firebase.initializeApp(config);
-  </script>
-
-  <script>
-    $('.dropdown-trigger').dropdown();
-  </script>
+  <script src="js/Datosuser.js"></script>
+  <script src="js/inicio.js"></script>
 </body>
 
 </html>

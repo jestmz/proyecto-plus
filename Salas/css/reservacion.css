@@ -15,7 +15,11 @@ body {
 
 @media only screen and (max-width: 500px) {
   .contenido-modal{
-    height: 75%;
+    height: 70%;
+   }
+
+   #dada{
+     height: 90%;
    }
 
    .margin{

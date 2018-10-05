@@ -5,7 +5,10 @@ body{
 .login{
     background: #ffffff;
     border: 1px solid black;
-    margin-top: 15%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     text-align: center
 }
 
@@ -14,9 +17,21 @@ body{
     max-height: 20%;
 }
 
+.width{
+    min-height: 250px;
+    max-height: 250px;
+    margin-top: 10%;
+}
 
-.axel{
-    font-family: 'Baloo Tammudu', cursive;
+.width2{
+    margin-bottom: 5%;
+}
+
+
+.tamaño{
+    float: right;
+    max-width: 300px;
+    max-height: 250px
 }
 
 .dis{
@@ -33,19 +48,41 @@ body{
     width: 60%;
 }
 
+.font{
+    font-size: 15px
+}
+
 .marg{
-    margin: 5%;
+    padding: 0 25px;
 }
 
 .margin{
     margin: 2%;
 }
 
-@media only screen and (max-width: 375px) {
-    .login{
-       width: 100%;
-       height: 100%;
-   }
+@media only screen and (max-width: 505px) {
+    .login {
+        width: 100%;
+        height: 100%;
+    }
+
+    .centrado {
+        position: absolute;
+        top: 35%;
+        left: 0;
+        transform: translate(0, -35%);
+    }
+
+    .top {
+        margin-top: 50%;
+    }
+
+    .tamaño{
+        float: right;
+        max-width: 100px;
+        max-height: 250px
+    }
+
  }
  
  #contenido {

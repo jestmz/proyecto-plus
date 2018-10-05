@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    $('#loader').show();
+
     firebase.auth().onAuthStateChanged(function (user) {
         var productos = {};
         var user = firebase.auth().currentUser;
@@ -13,8 +15,6 @@ $(document).ready(function () {
                     var mostrar = '<div class="move">';
                     mostrar += '<div class="card blue-grey darken-1">';
                     mostrar += '<div class="card-content white-text">';
-                    mostrar += '<span class="card-title" id="title">' + "Usuario:" + '</span>';
-                    mostrar += '<span class="card-title redt" id="title">' + valor.Nombre + '</span>';
                     mostrar += '<span class="card-title" id="title">No. Sala: <span class="redt ta">'  + valor.Sala + '</span></span>';
                     mostrar += '<span class="card-title" id="title">Fecha: <span class="redt ta">'  + valor.Fecha + '</span></span>';
                     mostrar += '</div>';
@@ -34,5 +34,60 @@ $(document).ready(function () {
                 console.log('Error ' + objetoError);
             });
         }, 2500);
+    });
+
+    $('#Mostrar').click(function () {
+        document.getElementById("dada").style.display = "block";
+        document.getElementById("dede").style.width = "450px";
+    });
+
+    $("#btnCancelar").click(function () {
+        document.getElementById("dada").style.display = "none";
+    });
+
+    $("#Aceptar").click(function () {
+        var sala = $("#Sala").val();
+        var fecha = $("#Fecha").val();
+        var horai = $("#Horai").val();
+        var horaf = $("#Horaf").val();
+
+        firebase.auth().onAuthStateChanged(function (user) {
+            var user = firebase.auth().currentUser;
+
+            var Res = {
+                Sala: sala,
+                Fecha: fecha,
+                HoraI: horai,
+                HoraF: horaf
+            }
+
+            var Res1 = {
+                Nombre: user.email,
+                Sala: sala,
+                Fecha: fecha,
+                HoraI: horai,
+                HoraF: horaf
+            }
+
+            if (sala == "" || fecha == "" || horai == "" || horaf == "") {
+                alert('No puedes dejar campos vacíos');
+            } else {
+                firebase.database().ref('Usuarios/' + user.uid + '/Reservaciones')
+                    .push(Res);
+                
+                firebase.database().ref('Reservaciones')
+                        .push(Res1);
+
+                alert('Tus datos se ingresaron correctamente');
+
+                $("#Sala").val("");
+                $("#Fecha").val("");
+                $("#Horai").val("");
+                $("#Horaf").val("");
+
+                document.getElementById("dada").style.display = "none";
+                location.reload();
+            }
+        });
     });
 });

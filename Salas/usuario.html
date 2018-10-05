@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/usuario.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Baloo+Tammudu" rel="stylesheet">
-    
+
 
 </head>
 
@@ -24,27 +24,27 @@
 
     <div class="container login hoverable">
         <div class="row mar">
-        <div class="center-align">
-            <h1 class="h1">Crea tu perfil</h1>
-        </div>
+            <div class="center-align">
+                <h1 class="h1">Crea tu perfil</h1>
+            </div>
             <form class="col s12">
                 <div class="input-field col s12 marg">
-                    <input id="nombre" type="text" class="validate" maxlength="10" required>                   
+                    <input id="nombre" type="text" class="validate" maxlength="10" required>
                     <label for="nombre">Nombre de usuario</label>
                 </div>
 
                 <div class="input-field col s6 marg center-align">
-                        <form action="#" class="center-align">
-                                <div class="file-field input-field">
-                                  <div class="btn">
-                                    <span>File</span>
-                                    <input type="file" id="imagen">
-                                  </div>
-                                  <div class="file-path-wrapper">
-                                    <input class="file-path validate" type="text">
-                                  </div>
-                                </div>
-                              </form>
+                    <form action="#" class="center-align">
+                        <div class="file-field input-field">
+                            <div class="btn">
+                                <span>File</span>
+                                <input type="file" id="imagen">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                            </div>
+                        </div>
+                    </form>
                 </div>
 
                 <div class="center-align">
@@ -53,16 +53,10 @@
                     </a>
                 </div>
                 <div class="center-align max"><img id="contenido"></div>
-            </form> 
+            </form>
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-
-    <script src="js/usuario.js"></script>
 
 
     <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
@@ -79,6 +73,12 @@
         firebase.initializeApp(config);
     </script>
 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+
+    <script src="js/usuario.js"></script>
 </body>
 
 </html>

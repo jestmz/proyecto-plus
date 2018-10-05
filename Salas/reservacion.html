@@ -2,7 +2,6 @@
 <html>
 
 <head>
-
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="shortcut icon" href="images/plus.ico" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -12,61 +11,7 @@
 </head>
 
 <body>
-
-        <div class="dada" id="dada">
-                <div class="contenido-modal" id="dede">
-                        <div class="login" id="reserva">
-                                <div class="row">
-                                        <div class="center-align">
-                                                <h1>Reservar</h1>
-                                        </div>
-                                        <form class="col s12">
-                                                <div class="mover">
-                                                        <label>Selecciona tu sala</label>
-                                                        <select class="browser-default" id="Sala">
-                                                                <option value="" disabled selected>Salas</option>
-                                                                <option value="Sala 1">Sala 1</option>
-                                                                <option value="Sala 2">Sala 2</option>
-                                                        </select>
-                                                </div>
-                                                <div class="input-field col s12">
-                                                        <p>Fecha</p>
-                                                        <input id="fecha" type="date" class="validate">
-                                                </div>
-                                                <div class="row">
-                                                        <div class="input-field col s6">
-                                                                <input id="Horai" type="time" class="validate">
-                                                                <label for="Horai">Hora de inicio </label>
-                                                        </div>
-                                                        <div class="input-field col s6">
-                                                                <input id="Horaf" type="time" class="validate">
-                                                                <label for="Horaf">Hora de finalizacion </label>
-                                                        </div>
-                                                </div>
-                                                <div class="center-align">
-                                                        <a class="waves-effect waves-light btn light-green accent-4" id="Aceptar">
-                                                                <i class="material-icons left">save</i>Reservar
-                                                        </a>
-                                                        <a class="waves-effect waves-light btn red darken-1" id="btnCancelar">
-                                                                <i class="material-icons left">close</i>Cancelar
-                                                        </a>
-                                                </div>
-
-                                                <div class="right-align margin">
-                                                        <a class="waves-effect waves-light btn blue">
-                                                                <i class="material-icons left">view_agenda</i>Ver
-                                                                agenda
-                                                        </a>
-                                                </div>
-                                        </form>
-                                </div>
-                        </div>
-                </div>
-
-        </div>
-
-
-        <header style="padding: 0">
+       <header style="padding: 0">
                 <div class="nav-wrapper light-blue size z-depth-3">
                         <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons mover small">menu</i></a>
                         <ul id="slide-out" class="sidenav">
@@ -89,16 +34,16 @@
                                 </li>
                                 <li><a href="reservacion.html"><i class="material-icons">today</i>Reservar salas</a></li>
                                 <li><a href="horarios.html"><i class="material-icons">access_time</i>Horarios</a></li>
-                                <li><a href="inicio.html"><i class="material-icons">settings</i>Configuración</a></li>
+                                <li><a href="configuracion.html"><i class="material-icons">settings</i>Configuración</a></li>
                                 <li><a href="index.html" id="cerrar" title="cerrar sesión" onclick="desconectar()">
                                                 <i class="small material-icons">exit_to_app</i>Cerrar sesión
                                         </a>
                                 </li>
-                        
+
                         </ul>
-                        <div class="mo">
+                        <div class="mo" href="index.html" onclick="desconectar()">
                                 <a>Cerrar sesión</a>
-                                <a href="index.html" title="cerrar sesión" onclick="desconectar()"><i class="small material-icons">exit_to_app</i></a>
+                                <a title="cerrar sesión"><i class="small material-icons">exit_to_app</i></a>
                         </div>
                 </div>
                 </div>
@@ -122,95 +67,12 @@
                 </tbody>
         </table>
 
-
-        <script>
-                var actual = new Date();
-
-                function mostrarCalendario(year, month) {
-                        var now = new Date(year, month - 1, 1);
-                        var last = new Date(year, month, 0);
-                        var primerDiaSemana = (now.getDay() == 0) ? 7 : now.getDay();
-                        var ultimoDiaMes = last.getDate();
-                        var dia = 0;
-                        var resultado = "<tr bgcolor='silver'>";
-                        var diaActual = 0;
-                        console.log(ultimoDiaMes);
-
-                        var last_cell = primerDiaSemana + ultimoDiaMes;
-
-                        // hacemos un bucle hasta 42, que es el máximo de valores que puede
-                        // haber... 6 columnas de 7 dias
-                        for (var i = 1; i <= 42; i++) {
-                                if (i == primerDiaSemana) {
-                                        // determinamos en que dia empieza
-                                        dia = 1;
-                                }
-                                if (i < primerDiaSemana || i >= last_cell) {
-                                        // celda vacia
-                                        resultado += "<td>&nbsp;</td>";
-                                } else {
-                                        // mostramos el dia
-                                        if (dia == actual.getDate() && month == actual.getMonth() + 1 && year == actual
-                                                .getFullYear())
-                                                resultado += "<td class='hoy'>" + dia + "</td>";
-                                        else
-                                                resultado += "<td>" + dia + "</td>";
-                                        dia++;
-                                }
-                                if (i % 7 == 0) {
-                                        if (dia > ultimoDiaMes)
-                                                break;
-                                        resultado += "</tr><tr>\n";
-                                }
-                        }
-                        resultado += "</tr>";
-
-                        var meses = Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto",
-                                "Septiembre", "Octubre", "Noviembre", "Diciembre");
-
-                        // Calculamos el siguiente mes y año
-                        nextMonth = month + 1;
-                        nextYear = year;
-                        if (month + 1 > 12) {
-                                nextMonth = 1;
-                                nextYear = year + 1;
-                        }
-
-                        // Calculamos el anterior mes y año
-                        prevMonth = month - 1;
-                        prevYear = year;
-                        if (month - 1 < 1) {
-                                prevMonth = 12;
-                                prevYear = year - 1;
-                        }
-
-                        document.getElementById("calendar").getElementsByTagName("caption")[0].innerHTML = "<div>" +
-                                meses[month - 1] + " / " + year + "</div><div><a onclick='mostrarCalendario(" +
-                                prevYear + "," + prevMonth + ")'>&lt;</a> <a onclick='mostrarCalendario(" + nextYear +
-                                "," + nextMonth + ")'>&gt;</a></div>";
-                        document.getElementById("calendar").getElementsByTagName("tbody")[0].innerHTML = resultado;
-                }
-
-                mostrarCalendario(actual.getFullYear(), actual.getMonth() + 1);
-        </script>
-
-        <!-- Initialize Firebase -->
-        <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
-        <script>
-                var config = {
-                        apiKey: "AIzaSyA0OOMKbMytDe8FZSMEx44LOJLacepiBM8",
-                        authDomain: "salas-bbc10.firebaseapp.com",
-                        databaseURL: "https://salas-bbc10.firebaseio.com",
-                        projectId: "salas-bbc10",
-                        storageBucket: "salas-bbc10.appspot.com",
-                        messagingSenderId: "257972747978"
-                };
-                firebase.initializeApp(config);
-        </script>
-
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-                crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+        <script src="js/inicio.js"></script>
+        <script src="js/Datosuser.js"></script>
         <script src="js/reservacion.js"></script>
 </body>
 
