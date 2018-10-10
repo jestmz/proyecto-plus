@@ -28,8 +28,6 @@ $(document).ready(function () {
         }
     });
 
-
-
     var imagen;
 
     $("#imagen").change(function () {

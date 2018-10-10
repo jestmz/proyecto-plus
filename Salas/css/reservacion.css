@@ -1,207 +1,187 @@
-body {
+html,
+body,
+.block {
+  height: 100%;
+  width: 100%;
   background: white;
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
+#con {
+  width: 100%;
+  height: 100%;
+  background: rgba(14, 23, 28, 0.5);
+  display: none;
+  position: absolute;
+}
 
-.contenido-modal {
-	background: white;
-	height: 65%;
-	margin: auto;
-  transition: 15s;
-  padding: 0 40px
+#dada {
+  background: #ffffff;
+  border: 1px solid black;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container {
+  width: 50%;
+  height: 50%
+}
+
+.padding {
+  width: 70%;
+}
+
+.space {
+  width: 90%;
+  margin: 20px 0;
+  height: 25px 0;
+}
+
+.centrado {
+  margin-top: 15%;
+}
+
+.sidenav li a:hover {
+  background: #1de9b6;
+}
+
+.hide {
+  display: none;
+}
+
+#menu {
+  cursor: pointer;
+  margin: 10px;
+  float: left;
+}
+
+.size {
+  height: 60px;
+}
+
+.size a {
+  color: #ffffff;
+}
+
+.mo {
+  float: right;
+  padding: 10px 15px;
+  padding-top: 15px;
+}
+
+.mover {
+  margin: 15px 0 0 10px;
+}
+
+span {
+  cursor: default
+}
+
+.dada {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+  background: rgba(14, 23, 28, 0.5);
+}
+
+.bottom{
+  float: right;
+  margin-top: 5%;
+  margin-right: 5%; 
 }
 
 @media only screen and (max-width: 500px) {
-  .contenido-modal{
-    height: 70%;
-   }
-
-   #dada{
-     height: 90%;
-   }
-
-   .margin{
-     margin: 20% -10px 0 0
-   }
-  }
-
-.margin{
-  margin: 15% -30px 15% 0;
+#dada{
+  width: 100%;
+    height: 100%;
 }
-  
-  .sidenav li a:hover{
-    background: #1de9b6;
-  }
-  
-  .navbar {
-    overflow: hidden;
-    background-color: #333;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  .shadow {
-    background: #616161;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .font{
-    font-family: 'Anton', sans-serif;
-  }
-  
-  .hide{
-    display: none;
-  }
-  
-  #menu{
-    cursor: pointer;
-    margin: 10px;
-    float: left;
-  }
-  
-  .size{
-    height: 60px;
-  }
-  
-  .size a{
-    color: #ffffff;
-  }
-  
-  .mo{
-    float: right;
-    padding: 10px 15px;
-    padding-top: 15px;
-  }
-  
-  .mover{
-    margin: 15px 0 0 10px;
-  }
-  
-  .mo:hover{
-    background: #039be5;
-  }
-  
-  span{
-    cursor: default
-  }
-  
-  @media only screen and (max-width: 800px) {
-     .card-container{
-        background-color: lightblue;
-        width: 100%;
-    }
-  }
-  
-  @media only screen and (max-width: 800px) {
-    .l{
-      background: #0159bd
-   }
-  }
-  
-  @media only screen and (max-width: 800px) {
-    .none{
-      display: none;
-      margin: 0%
-   }
-  }
-  
-  
-  .pin{
-    position: relative;
-  }
-  
-  
-  html, body, .block {
-    height: 100%;
-    width: 100%;
-  }
-  nav ul li a:hover, nav ul li a.active {
-    background-color: rgba(0,0,0,.1);
-  }
-  footer {
-    padding-left: 0;
-  }
-  
-  .l{
-    padding: 0;
-    margin: 0
-  }
-  
-  
+
+.centrado{
+  position: absolute;
+  top: 30%;
+  transform: translate(0, -30%);
+ }
+
+ .bottom{
+  margin-top: 45%;
+}
+}
 
 /* ---------- CALENDAR ---------- */
 
 #calendar {
-	font-family: 'Roboto', sans-serif;
-	font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
   width: 100%;
   height: 82.4%;
 }
 
 @media only screen and (max-width: 500px) {
-  #calendar{
+  #calendar {
     width: 100%;
     height: 76%;
-   }
   }
-  
-#calendar caption {
-	text-align: center;
-	padding: 15px 10px;
-	background-color: #01579b;
-	color: #fff;
-  font-weight: bold; 
- 
 }
 
-.white{
+#calendar caption {
+  text-align: center;
+  padding: 15px 10px;
+  background-color: #01579b;
+  color: #fff;
+  font-weight: bold;
+}
+
+.white {
   background: white
 }
 
 #calendar caption div:nth-child(1) {
-	font-family: 'Roboto', sans-serif;
-	font-size: 25px;
-	margin: 0%;
-	padding: 0;
-	width: 300px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  margin: 0%;
+  padding: 0;
+  width: 300px;
   height: 50px;
   margin-top: 20px;
   cursor: default
 }
 
 #calendar caption div:nth-child(2) {
-	float: right;
+  float: right;
   margin-top: -35px
 }
 
 #calendar caption div:nth-child(2) a {
   cursor: pointer;
   color: #fff;
-	padding: 20px;
-  margin:  5px 0 5px;
+  padding: 20px;
+  margin: 5px 0 5px;
   margin-top: 35px;
 }
 
 #calendar caption div:nth-child(2) a:hover {
-	background: #2196f3;
-	border-radius: 100%;
-	color: white
+  background: #2196f3;
+  border-radius: 100%;
+  color: white
 }
 
 #calendar th {
-	text-align: center;
-	background-color: #757575;
-	color: #fff;
+  text-align: center;
+  background-color: #757575;
+  color: #fff;
   min-width: 40px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 20px;
 }
 
 #calendar td {
-	text-align: center;
-	padding: 2px 5px;
+  text-align: center;
+  padding: 2px 5px;
   background-color: #ffe0b2;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 20px;
@@ -209,20 +189,10 @@ body {
 }
 
 #calendar td:hover {
-	background-color: rgb(0, 172, 224);
-	cursor: pointer;
+  background-color: rgb(0, 172, 224);
+  cursor: pointer;
 }
 
 #calendar .hoy {
-	background-color: #81d4fa;
+  background-color: #81d4fa;
 }
-
-.dada {
-	width: 100%;
-	height: 100%;
-  display: none;
-  position: absolute;
-	background: rgba(14, 23, 28, 0.5);
-}
-
-

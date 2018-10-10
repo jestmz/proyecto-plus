@@ -4,14 +4,45 @@
 <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="shortcut icon" href="images/plus.ico" />
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-        <link rel="stylesheet" href="css/materialize.min.css">
-        <link rel="stylesheet" href="css/reservacion.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+        <link rel="stylesheet" href="css/materialize.min.css" />
+        <link rel="stylesheet" href="css/reservacion.css" />
 </head>
 
 <body>
-       <header style="padding: 0">
+        <div id="con">
+                <div id="dada" class="container bac login">
+                        <div class="row centrado">
+                                <div class="center-align">
+                                        <h1>Reservar</h1>
+                                </div>
+                                <div>
+                                        <label for="" style="font-size: 25px">¿En que sala desea hacer su reservación?</label>
+                                </div>
+                                <form class="col s12">
+                                        <div class="marg">
+                                                <div class="col s6 space">
+                                                        <a id="Sala1" class="waves-effect waves-light btn-large orange darken-3"><i
+                                                                        class="material-icons right">cloud</i>Sala
+                                                                1</a>
+                                                </div>
+                                                <div class="col s6 space">
+                                                        <a id="Sala2" class="waves-effect waves-light btn-large"><i
+                                                                        class="material-icons right">cloud</i>Sala
+                                                                2</a>
+                                                </div>
+                                        </div>
+                                        <div class="col s12 space">
+                                                <a id="Cancelar" class="waves-effect waves-light btn-large red"><i
+                                                                class="material-icons left">cancel</i>Cancelar</a>
+                                        </div>
+                                </form>
+                        </div>
+                </div>
+        </div>
+
+        <header style="padding: 0">
                 <div class="nav-wrapper light-blue size z-depth-3">
                         <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons mover small">menu</i></a>
                         <ul id="slide-out" class="sidenav">
@@ -28,16 +59,18 @@
                                                 salas</a>
 
                                         <ul id='dropdown1' class='dropdown-content'>
-                                                <li><a href="sala1.html"><i class="material-icons ">work</i>Sala 1</a></li>
-                                                <li><a href="sala2.html"><i class="material-icons ">weekend</i>Sala 2</a></li>
+                                                <li><a href="sala1.html"><i class="material-icons ">work</i>Sala
+                                                                1</a></li>
+                                                <li><a href="sala2.html"><i class="material-icons ">weekend</i>Sala
+                                                                2</a></li>
                                         </ul>
                                 </li>
-                                <li><a href="reservacion.html"><i class="material-icons">today</i>Reservar salas</a></li>
-                                <li><a href="horarios.html"><i class="material-icons">access_time</i>Horarios</a></li>
+                                <li><a href="reservacion.html"><i class="material-icons">today</i>Reservar
+                                                salas</a></li>
+                                <li><a href="tus.html"><i class="material-icons">access_time</i>Tus reservaciones</a></li>
                                 <li><a href="configuracion.html"><i class="material-icons">settings</i>Configuración</a></li>
                                 <li><a href="index.html" id="cerrar" title="cerrar sesión" onclick="desconectar()">
-                                                <i class="small material-icons">exit_to_app</i>Cerrar sesión
-                                        </a>
+                                                <i class="small material-icons">exit_to_app</i>Cerrar sesión</a>
                                 </li>
 
                         </ul>
@@ -45,7 +78,6 @@
                                 <a>Cerrar sesión</a>
                                 <a title="cerrar sesión"><i class="small material-icons">exit_to_app</i></a>
                         </div>
-                </div>
                 </div>
         </header>
 
@@ -68,11 +100,11 @@
         </table>
 
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
+                crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
         <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
-        <script src="js/inicio.js"></script>
         <script src="js/Datosuser.js"></script>
+        <script src="js/Cerrar.js"></script>
         <script src="js/reservacion.js"></script>
 </body>
 

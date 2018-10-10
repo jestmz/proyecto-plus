@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" href="images/plus.ico" />
   <!--Import Google Icon Font-->
@@ -37,7 +35,7 @@
           </ul>
         </li>
         <li><a href="reservacion.html"><i class="material-icons">today</i>Reservar salas</a></li>
-        <li><a href="horarios.html"><i class="material-icons">access_time</i>Horarios</a></li>
+        <li><a href="tus.html"><i class="material-icons">access_time</i>Tus reservaciones</a></li>
         <li><a href="configuracion.html"><i class="material-icons">settings</i>Configuración</a></li>
         <li><a href="index.html" id="cerrar" title="cerrar sesión" onclick="desconectar()">
             <i class="small material-icons">exit_to_app</i>Cerrar sesión
@@ -149,36 +147,16 @@
 
   <!-- Scripts -->
   <script>
-    var slideIndex = 0;
-    showSlides();
-
-    function showSlides() {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("dot");
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) {
-        slideIndex = 1
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " active";
-      setTimeout(showSlides, 2500); // Change image every 2 seconds
-    }
+   
   </script>
 
   <!-- Initialize Firebase -->
-
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
   <script src="js/Datosuser.js"></script>
+  <script src="js/Cerrar.js"></script>
   <script src="js/inicio.js"></script>
 </body>
 

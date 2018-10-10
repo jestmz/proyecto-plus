@@ -1,238 +1,257 @@
  #loader {
-    display: block;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 100px;
-    height: 100px;
-    margin: -75px 0 0 -75px;
-    border-radius: 50%;
-    border: 3px solid transparent;
-    border-top-color: #3498db;
+     display: block;
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     width: 100px;
+     height: 100px;
+     margin: -75px 0 0 -75px;
+     border-radius: 50%;
+     border: 3px solid transparent;
+     border-top-color: #3498db;
 
-    -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
-    animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
-}
+     -webkit-animation: spin 2s linear infinite;
+     /* Chrome, Opera 15+, Safari 5+ */
+     animation: spin 2s linear infinite;
+     /* Chrome, Firefox 16+, IE 10+, Opera */
+ }
 
-    #loader:before {
-        content: "";
-        position: absolute;
-        top: 5px;
-        left: 5px;
-        right: 5px;
-        bottom: 5px;
-        border-radius: 50%;
-        border: 3px solid transparent;
-        border-top-color: #e74c3c;
+ #loader:before {
+     content: "";
+     position: absolute;
+     top: 5px;
+     left: 5px;
+     right: 5px;
+     bottom: 5px;
+     border-radius: 50%;
+     border: 3px solid transparent;
+     border-top-color: #e74c3c;
 
-        -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
-        animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
-    }
+     -webkit-animation: spin 3s linear infinite;
+     /* Chrome, Opera 15+, Safari 5+ */
+     animation: spin 3s linear infinite;
+     /* Chrome, Firefox 16+, IE 10+, Opera */
+ }
 
-    #loader:after {
-        content: "";
-        position: absolute;
-        top: 15px;
-        left: 15px;
-        right: 15px;
-        bottom: 15px;
-        border-radius: 50%;
-        border: 3px solid transparent;
-        border-top-color: #f9c922;
+ #loader:after {
+     content: "";
+     position: absolute;
+     top: 15px;
+     left: 15px;
+     right: 15px;
+     bottom: 15px;
+     border-radius: 50%;
+     border: 3px solid transparent;
+     border-top-color: #f9c922;
 
-        -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
-          animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
-    }
+     -webkit-animation: spin 1.5s linear infinite;
+     /* Chrome, Opera 15+, Safari 5+ */
+     animation: spin 1.5s linear infinite;
+     /* Chrome, Firefox 16+, IE 10+, Opera */
+ }
 
-    @-webkit-keyframes spin {
-        0%   { 
-            -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-            -ms-transform: rotate(0deg);  /* IE 9 */
-            transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
-        }
-        100% {
-            -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-            -ms-transform: rotate(360deg);  /* IE 9 */
-            transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
-        }
-    }
-    @keyframes spin {
-        0%   { 
-            -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-            -ms-transform: rotate(0deg);  /* IE 9 */
-            transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
-        }
-        100% {
-            -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-            -ms-transform: rotate(360deg);  /* IE 9 */
-            transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
-        }
-    }
- 
-.ir {
-    background-color: transparent;
-    border: 0;
-    overflow: hidden;
-    /* IE 6/7 fallback */
-    *text-indent: -9999px;
-}
+ @-webkit-keyframes spin {
+     0% {
+         -webkit-transform: rotate(0deg);
+         /* Chrome, Opera 15+, Safari 3.1+ */
+         -ms-transform: rotate(0deg);
+         /* IE 9 */
+         transform: rotate(0deg);
+         /* Firefox 16+, IE 10+, Opera */
+     }
 
-.ir:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 150%;
-}
+     100% {
+         -webkit-transform: rotate(360deg);
+         /* Chrome, Opera 15+, Safari 3.1+ */
+         -ms-transform: rotate(360deg);
+         /* IE 9 */
+         transform: rotate(360deg);
+         /* Firefox 16+, IE 10+, Opera */
+     }
+ }
 
-/*
+ @keyframes spin {
+     0% {
+         -webkit-transform: rotate(0deg);
+         /* Chrome, Opera 15+, Safari 3.1+ */
+         -ms-transform: rotate(0deg);
+         /* IE 9 */
+         transform: rotate(0deg);
+         /* Firefox 16+, IE 10+, Opera */
+     }
+
+     100% {
+         -webkit-transform: rotate(360deg);
+         /* Chrome, Opera 15+, Safari 3.1+ */
+         -ms-transform: rotate(360deg);
+         /* IE 9 */
+         transform: rotate(360deg);
+         /* Firefox 16+, IE 10+, Opera */
+     }
+ }
+
+ .ir {
+     background-color: transparent;
+     border: 0;
+     overflow: hidden;
+     /* IE 6/7 fallback */
+     *text-indent: -9999px;
+ }
+
+ .ir:before {
+     content: "";
+     display: block;
+     width: 0;
+     height: 150%;
+ }
+
+ /*
  * Hide from both screenreaders and browsers: h5bp.com/u
  */
 
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
+ .hidden {
+     display: none !important;
+     visibility: hidden;
+ }
 
-/*
+ /*
  * Hide only visually, but have it available for screenreaders: h5bp.com/v
  */
 
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
+ .visuallyhidden {
+     border: 0;
+     clip: rect(0 0 0 0);
+     height: 1px;
+     margin: -1px;
+     overflow: hidden;
+     padding: 0;
+     position: absolute;
+     width: 1px;
+ }
 
-/*
+ /*
  * Extends the .visuallyhidden class to allow the element to be focusable
  * when navigated to via the keyboard: h5bp.com/p
  */
 
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
+ .visuallyhidden.focusable:active,
+ .visuallyhidden.focusable:focus {
+     clip: auto;
+     height: auto;
+     margin: 0;
+     overflow: visible;
+     position: static;
+     width: auto;
+ }
 
-/*
+ /*
  * Hide visually and from screenreaders, but maintain layout
  */
 
-.invisible {
-    visibility: hidden;
-}
 
-.move{
-    display: block;
-    float: left;
-    width: 32%;
-    height: auto;
-    margin: 0 0.5%; 
-}
-
-.fondo{
-    padding: 10px 15px;
-    background: rgb(13, 168, 196)
-}
-
-.color{
-    color: white
-}
-
-@media only screen and (max-width: 375px) {
-    .move{
-       width: 100%;
-       height: 100%;
-   }
+ .color {
+     color: white
  }
- 
- .sidenav li a:hover{
-    background: #1de9b6;
-  }
-  
-  .navbar {
-    overflow: hidden;
-    background-color: #333;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  #menu{
-    cursor: pointer;
-    margin: 10px;
-    float: left;
-  }
-  
-  .size{
-    height: 60px;
-  }
-  
-  .size a{
-    color: #ffffff;
-  }
-  
-  .mo{
-    float: right;
-    padding: 10px 15px;
-    padding-top: 15px;
-  }
-  
-  .mo:hover{
-    background: #039be5;
-    cursor: pointer;
-  }
 
-  .mover{
-    margin: 15px 0 0 10px;
-  }  
-  
-  span{
-    cursor: default
-  }
+ .sidenav li a:hover {
+     background: #1de9b6;
+ }
 
-  #footer{
-      display: none;
-  }
+ .navbar {
+     overflow: hidden;
+     background-color: #333;
+     font-family: Arial, Helvetica, sans-serif;
+ }
 
-  .tam{
-    width: 100%;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    float: right;
-    background: #ffe601;
-}
+ #menu {
+     cursor: pointer;
+     margin: 10px;
+     float: left;
+ }
 
-.re{
-    display: block;
-    width: 50%;
-    height: 50%;
-}
+ .size {
+     height: 60px;
+ }
 
+ .size a {
+     color: #ffffff;
+ }
 
-.w{
-    display: block;
-    width: 100%;
-}
+ .mo {
+     float: right;
+     padding: 10px 15px;
+     padding-top: 15px;
+ }
 
-.w h1{
-    width: 50%;
-    display: block;
-}
+ .mo:hover {
+     background: #039be5;
+     cursor: pointer;
+ }
 
-.redt{
-    color: rgb(0, 255, 170);
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 30px;
-}
+ .mover {
+     margin: 15px 0 0 10px;
+ }
 
-.ta{
-    font-size: 20px
-}
+ span {
+     cursor: default
+ }
+
+ #footer {
+     bottom: 0;
+     width: 100%;
+     display: none;
+ }
+
+ .tam {
+     width: 100%;
+     padding-top: 20px;
+     padding-bottom: 10px;
+     float: right;
+     background: #ffffff;
+ }
+
+ .tam h1 {
+     display: inline;
+     color: black;
+     width: 10%;    
+ }
+
+ .re {
+     display: block;
+     width: 50%;
+     height: 50%;
+ }
+
+ #table {
+     display: none;
+ }
+
+ .position {
+     width: 100%;
+ }
+
+ th {
+     width: 320px;
+     text-align: center
+ }
+
+ td {
+     height: 80px;
+     text-align: center
+ }
+
+ @media only screen and (max-width: 505px) {
+     .move {
+         width: 100%;
+         height: 100%;
+     }
+
+     #table {
+         width: 100%;
+         overflow-x: scroll;
+     }
+
+     th {
+         width: 20%;
+     }
+ }

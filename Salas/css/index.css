@@ -22,7 +22,11 @@ body{
    }
 
 .margin{
-    margin: 2%;
+    margin: 1% 2%;
+}
+
+.margen {
+    padding: 0 35px
 }
 
 @media only screen and (max-width: 505px) {
@@ -37,3 +41,4 @@ body{
     transform: translate(0, -20%);
    }
  }
+ 

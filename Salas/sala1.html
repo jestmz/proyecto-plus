@@ -7,18 +7,14 @@
     <title>Sala 1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/plus.ico" />
-    <link rel="stylesheet" type="text/css" media="screen" href="css/sala1.css" />
-    <link rel="stylesheet" href="css/inicio.css">
-    
-
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/inicio.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/versalas.css" />
     
 </head>
 
@@ -45,30 +41,26 @@
                                         </ul>
                                 </li>
                                 <li><a href="reservacion.html"><i class="material-icons">today</i>Reservar salas</a></li>
-                                <li><a href="horarios.html"><i class="material-icons">access_time</i>Horarios</a></li>
+                                <li><a href="tus.html"><i class="material-icons">access_time</i>Tus reservaciones</a></li>
                                 <li><a href="inicio.html"><i class="material-icons">settings</i>Configuración</a></li>
                                 <li><a href="index.html" id="cerrar" title="cerrar sesión" onclick="desconectar()">
                                                 <i class="small material-icons">exit_to_app</i>Cerrar sesión
                                         </a>
-                                </li>
-                        
+                                </li>                        
                         </ul>
-                        <div class="mo">
+                        <div class="mo" title="cerrar sesión" onclick="desconectar()">
                                 <a>Cerrar sesión</a>
-                                <a href="index.html" title="cerrar sesión" onclick="desconectar()"><i class="small material-icons">exit_to_app</i></a>
+                                <a href="index.html"><i class="small material-icons">exit_to_app</i></a>
                         </div>
                 </div>
                 </div>
         </header>
             
     <div class="w3-main w3-white">
-
         <!-- Push down content on small screens -->
         <div class="w3-hide-large" style="margin-top:80px"></div>
-
         <!-- Slideshow Header -->
         <div class="desaparecer">
-
         <div class="w3-container" id="apartment">
             <div class="center">
                 <h1 class="w3-text-green">Sala 1</h1>
@@ -91,9 +83,7 @@
                     <p>Bedroom</p>
                 </div>
             </div>
-        </div>
-
-        
+        </div>        
 
         <div class="w3-row-padding w3-section">
             <div class="w3-col s4">
@@ -110,7 +100,6 @@
             </div>
         </div>
     </div>
-
 
         <div class="container" id="galeria">
                 <div class="mySlides2">
@@ -132,34 +121,25 @@
                   <p id="caption"></p>
                 </div>
             </div>
-        <div class="w3-container background">
+            
+        <div class="w3-container">
+            <div class="backgrounds">
             <h4><strong>The space</strong></h4>
             <div class="w3-row w3-large">
                 <div class="w3-col s6">
-                    <p><i class="fa fa-fw fa-male"></i> Max people: 4</p>
-                    <p><i class="fa fa-fw fa-bath"></i> Bathrooms: 2</p>
-                    <p><i class="fa fa-fw fa-bed"></i> Bedrooms: 1</p>
+                    <p><i class="fa fa-fw fa-male"></i>Max capacidad: <i class="white1">4</i></p>
                 </div>
                 <div class="w3-col s6">
-                    <p><i class="fa fa-fw fa-clock-o"></i> Check In: After 3PM</p>
-                    <p><i class="fa fa-fw fa-clock-o"></i> Check Out: 12PM</p>
+                    <p><i class="fa fa-fw fa-clock-o"></i> Check In: <i class="white1">After 3PM</i></p>
+                    <p><i class="fa fa-fw fa-clock-o"></i> Check Out: <i class="white1">12PM</i></p>
                 </div>
+                <div class="right-align margin">
+                        <a class="waves-effect waves-light btn blue">
+                            <i class="material-icons left">view_agenda</i>Reservar
+                        </a>
+                    </div>
             </div>
-            <hr>
-
-            <h4><strong>Amenities</strong></h4>
-            <div class="w3-row w3-large">
-                <div class="w3-col s6">
-                    <p><i class="fa fa-fw fa-shower"></i> Shower</p>
-                    <p><i class="fa fa-fw fa-wifi"></i> WiFi</p>
-                    <p><i class="fa fa-fw fa-tv"></i> TV</p>
-                </div>
-                <div class="w3-col s6">
-                    <p><i class="fa fa-fw fa-cutlery"></i> Kitchen</p>
-                    <p><i class="fa fa-fw fa-thermometer"></i> Heating</p>
-                    <p><i class="fa fa-fw fa-wheelchair"></i> Accessible</p>
-                </div>
-            </div>
+        </div>
             <hr>
 
             <h4><strong>Extra Info</strong></h4>
@@ -175,116 +155,45 @@
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                 ex ea commodo consequat.</p>
             <p>Subscribe to receive updates on available dates and special offers.</p>
-            <p><button class="w3-button w3-green w3-third" onclick="document.getElementById('subscribe').style.display='block'">Reservar</button></p>
         </div>
-        <hr>
 
+        <footer class="page-footer grey darken-3 z-depth-2" id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="s2">
+                        <img style="max-width: 50px;" src="images/apple.png" alt="">
+                    </div>
+                    <div class="col l6 s12">
+                            <h5 class="white-text">PLUS TI</h5>
+                            <p class="grey-text text-lighten-4">FUNDADORES:
+                              SELVIN CAN  Y JEREMY CLARK
+                              </p>
+                        </div>
+                        <div class="col l4 offset-l2 s12">
+                            <h5 class="white-text">Links</h5>
+                            <ul>
+                                <li><a class="grey-text text-lighten-3" href="#">Inicio</a></li>
+                                <li><a class="grey-text text-lighten-3" href="#!">contactenos</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <div class="container">
+                        © 2018 not Copyright
+                        <a class="grey-text text-lighten-4 right" href="#!">mas links</a>
+                    </div>
+                </div>
+            </footer>   
+        <!-- End page content -->              
 
-
-        <!-- End page content -->
-
-
-    <script>
-            var slideIndex = 1;
-            showSlides(slideIndex);
-            
-            function plusSlides(n) {
-              showSlides(slideIndex += n);
-            }
-            
-            function currentSlide(n) {
-              showSlides(slideIndex = n);
-            }
-            
-            function showSlides(n) {
-              var i;
-              var slides = document.getElementsByClassName("mySlides2");
-              var dots = document.getElementsByClassName("demo");
-              var captionText = document.getElementById("caption");
-              if (n > slides.length) {slideIndex = 1}
-              if (n < 1) {slideIndex = slides.length}
-              for (i = 0; i < slides.length; i++) {
-                  slides[i].style.display = "none";
-              }
-              for (i = 0; i < dots.length; i++) {
-                  dots[i].className = dots[i].className.replace(" active", "");
-              }
-              slides[slideIndex-1].style.display = "block";
-              dots[slideIndex-1].className += " active";
-              captionText.innerHTML = dots[slideIndex-1].alt;
-            }
-            </script>
-                
-
-
-    <script>
-        // Script to open and close sidebar when on tablets and phones
-        function w3_open() {
-            document.getElementById("mySidebar").style.display = "block";
-            document.getElementById("myOverlay").style.display = "block";
-        }
-
-        function w3_close() {
-            document.getElementById("mySidebar").style.display = "none";
-            document.getElementById("myOverlay").style.display = "none";
-        }
-
-        // Slideshow Apartment Images
-        var slideIndex = 1;
-        showDivs(slideIndex);
-
-        function plusDivs(n) {
-            showDivs(slideIndex += n);
-        }
-
-        function currentDiv(n) {
-            showDivs(slideIndex = n);
-        }
-
-        function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("demo");
-            if (n > x.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = x.length
-            }
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
-            }
-            x[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " w3-opacity-off";
-        }
-    </script>
-
-    <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyA0OOMKbMytDe8FZSMEx44LOJLacepiBM8",
-            authDomain: "salas-bbc10.firebaseapp.com",
-            databaseURL: "https://salas-bbc10.firebaseio.com",
-            projectId: "salas-bbc10",
-            storageBucket: "salas-bbc10.appspot.com",
-            messagingSenderId: "257972747978"
-        };
-        firebase.initializeApp(config);
-    </script>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-    <script src="js/sala1.js"></script>
-
-    <script>
-        $('.dropdown-trigger').dropdown();
-    </script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+        <script src="js/Datosuser.js"></script>
+        <script src="js/Cerrar.js"></script>
+        <script src="js/versalas.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="images/plus.ico" />
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Anton|Josefin+Sans|Quicksand" rel="stylesheet">
+  
+  <!--Import materialize.css-->
+  <link href="https://fonts.googleapis.com/css?family=Bentham|Playfair+Display|Raleway:400,500|Suranna|Trocchi" rel="stylesheet">
+
+  <!-- CSS-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <link rel="stylesheet" href="css/tus.css">
+  
+</head>
+
+<body>
+  <header style="padding: 0">
+      <div class="nav-wrapper light-blue size z-depth-3">
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons mover small">menu</i></a>
+        <ul id="slide-out" class="sidenav">
+          <li>
+            <div class="user-view user">
+              <div class="background">
+                <img src="images/vector-free-abstract-background-3.jpg">
+              </div>
+            </div>
+          </li>
+          <li><a href="inicio.html"><i class="material-icons">home</i>Inicio</a></li>
+          <li>
+            <a class='dropdown-trigger' data-target='dropdown1'><i class="material-icons ">photo</i>Ver
+              salas</a>
+              
+              <ul id='dropdown1' class='dropdown-content'>
+                <li><a href="sala1.html"><i class="material-icons ">work</i>Sala 1</a></li>
+                <li><a href="sala2.html"><i class="material-icons ">weekend</i>Sala 2</a></li>
+              </ul>
+            </li>
+            <li><a href="reservacion.html"><i class="material-icons">today</i>Reservar salas</a></li>
+            <li><a href="tus.html"><i class="material-icons">access_time</i>Tus reservaciones</a></li>
+            <li><a href="configuracion.html"><i class="material-icons">settings</i>Configuración</a></li>
+            <li><a href="index.html" id="cerrar" title="cerrar sesión" onclick="desconectar()">
+                <i class="small material-icons">exit_to_app</i>Cerrar sesión
+              </a>
+            </li>
+            
+          </ul>
+          <div class="mo" title="cerrar sesión" onclick="desconectar()">
+            <a>Cerrar sesión</a>
+            <a href="index.html"><i class="material-icons">exit_to_app</i></a>
+          </div>
+        </div>
+      </header>
+    
+
+      <div id="con">
+          <div id="dada" class="container bac login">
+                  <div class="row centrado">
+                          <div class="center-align">
+                                  <h1>Tus reservaciones</h1>
+                          </div>
+                          <div class="center-align">
+                                  <label for="" style="font-size: 25px">¿Que sala desea ver?</label>
+                          </div>
+                          <form class="col s12">
+                                  <div class="marg">
+                                          <div class="col s6 space">
+                                                  <a id="Sala1" class="waves-effect waves-light btn-large orange darken-3"><i class="material-icons right">cloud</i>Sala
+                                                          1</a>
+                                          </div>
+                                          <div class="col s6 space">
+                                                  <a id="Sala2" class="waves-effect waves-light btn-large"><i class="material-icons right">cloud</i>Sala
+                                                          2</a>
+                                          </div>
+                                  </div>
+                          </form>
+                  </div>
+          </div>
+  </div>
+
+
+  <footer class="page-footer grey darken-3 z-depth-2" id="footer">
+      <div class="container">
+          <div class="row">
+              <div class="col l6 s12">
+                  <h5 class="white-text">PLUS TI</h5>
+                  <p class="grey-text text-lighten-4">FUNDADORES:
+                    SELVIN CAN  Y JEREMY CLARK
+                    </p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                  <h5 class="white-text">Links</h5>
+                  <ul>
+                      <li><a class="grey-text text-lighten-3" href="#">Inicio</a></li>
+                      <li><a class="grey-text text-lighten-3" href="#!">contactenos</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="footer-copyright">
+          <div class="container">
+              © 2018 not Copyright
+              <a class="grey-text text-lighten-4 right" href="#!">mas links</a>
+          </div>
+      </div>
+  </footer>
+  
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+  <script src="js/Cerrar.js"></script>
+  <script src="js/Datosuser.js"></script>
+  <script src="js/tus.js"></script>
+</body>
+
+</html>

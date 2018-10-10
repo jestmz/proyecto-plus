@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/plus.ico" />
+    <title>Login de Usuarios</title>
 
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
     <link rel="stylesheet" href="css/index.css">
-    <title>Login de Usuarios</title>
 </head>
 
 <body>
@@ -21,23 +21,24 @@
             </div>
 
             <form class="col s12">
-                <div class="marg">
-                <div class="input-field col s12">
-                    <input id="email" type="text" class="validate">
-                    <label for="email">Correo electrónico</label>
-                </div>
-                <div class="input-field col s12">
-                    <input id="password" type="password" class="validate">
-                    <label for="password">Contraseña</label>
-                </div>
-            </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="input-field margen">
+                                <input id="email" type="text" class="validate">
+                                <label for="email" class="margen">Correo electrónico</label>
+                            </div>
+                        </div>
+                        <div class="col s12">
+                            <div class="input-field margen">
+                                <input id="password" type="password" class="validate">
+                                <label for="password" class="margen">Contraseña</label>
+                            </div>
+                        </div>
+                    </div>
 
                 <div class="center-align">
                     <a class="waves-effect waves-light btn blue darken-3" id="botonLogin">
                         <i class="material-icons left">save</i>Logearse
-                    </a>
-                    <a class="waves-effect waves-light btn red darken-1" id="btnCancelar">
-                        <i class="material-icons left">close</i>Cancelar
                     </a>
                 </div>
                 <div class="right-align margin">
@@ -54,21 +55,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-    
-    <script src="js/index.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyA0OOMKbMytDe8FZSMEx44LOJLacepiBM8",
-    authDomain: "salas-bbc10.firebaseapp.com",
-    databaseURL: "https://salas-bbc10.firebaseio.com",
-    projectId: "salas-bbc10",
-    storageBucket: "salas-bbc10.appspot.com",
-    messagingSenderId: "257972747978"
-  };
-  firebase.initializeApp(config);
-</script>
+    <script src="js/Datosuser.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
